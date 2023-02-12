@@ -19,6 +19,6 @@ public class Main {
                 upDown[i][a]=false;
             }
         }
-        cards = Randomizer.randomizer(); //Shuffle cards
+        cards = Randomizer.randomizer();
     }
 }

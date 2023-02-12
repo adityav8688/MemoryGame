@@ -7,7 +7,7 @@ public class Randomizer extends Main{
         Random random = new Random();
         int temp, t;
         for (int j = 0; j <= 20; j++) {
-            for (int x = 0; x < 16; x++) { //Randomize the card order
+            for (int x = 0; x < 16; x++) {
                 t = random.nextInt(1000) % 15;
                 temp = num[x];
                 num[x] = num[t];
@@ -15,7 +15,7 @@ public class Randomizer extends Main{
 
             }
             t = 0;
-            for (int r = 0; r < 4; r++) // Cards receive Numbers
+            for (int r = 0; r < 4; r++)
             {
                 for (int s = 0; s < 4; s++) {
                     cards[r][s] = num[t];
