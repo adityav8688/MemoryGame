@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to the memory matching game!");
         System.out.println("Enter the card coordinate for each card when promted to.");
-        System.out.println("For Example, 11 = Card 1 and 12 = Card 2.\n\n");
+        System.out.println("For Example, 11 = Card 1 and 12 = Card 2.\n");
         setup();
         Game.game(upDown, cards);
     }
