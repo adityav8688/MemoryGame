@@ -1,12 +1,11 @@
 public class Game extends DisplayBoard{
+    private static int noDownCards = 16, g1x=0, g1y=0, g2x=0, g2y=0;
     public static void game(boolean[][] upDown, int[][] cards) {
-        int noDownCards = 16;
         while (noDownCards > 0) {
             displayBoard(upDown, cards);
             System.out.println("Enter co-oridinate 1");
             String g1 = s.next();
             Integer ch = Integer.valueOf(g1);
-            int g1x=0, g1y=0;
             if((g1.length()==2)&&ch>0) {
                 g1x = Integer.valueOf(g1.substring(0, 1)) - 1;
                 g1y = Integer.valueOf(g1.substring(1, 2)) - 1;
@@ -20,11 +19,9 @@ public class Game extends DisplayBoard{
                 System.out.println("Enter valid coordinates and positve numbers, Example: 11 = Card 1 and 22 = Card 6");
                 game(upDown,cards);
             }
-
             System.out.println("Enter co-oridinate 2");
             String g2 = s.next();
             ch = Integer.valueOf(g2);
-            int g2x=0,g2y=0;
             if((g2.length()==2)&&ch>0) {
                 g2x = Integer.valueOf(g2.substring(0, 1)) - 1;
                 g2y = Integer.valueOf(g2.substring(1, 2)) - 1;

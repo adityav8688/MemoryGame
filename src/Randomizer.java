@@ -1,18 +1,15 @@
 import java.util.Random;
-
 public class Randomizer extends Main{
+    private static int num[] = {1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8};
+    private static int temp, t;
     public static int[][] randomizer() {
-        int num[] = {1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8};
-        int cards[][] = new int[4][4];
         Random random = new Random();
-        int temp, t;
         for (int j = 0; j <= 20; j++) {
             for (int x = 0; x < 16; x++) {
-                t = random.nextInt(1000) % 15;
+                t = random.nextInt(100) % 15;
                 temp = num[x];
                 num[x] = num[t];
                 num[t] = temp;
-
             }
             t = 0;
             for (int r = 0; r < 4; r++)
@@ -22,7 +19,6 @@ public class Randomizer extends Main{
                     t = t + 1;
                 }
             }
-
         }
         return cards;
     }
